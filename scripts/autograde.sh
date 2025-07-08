@@ -1,5 +1,5 @@
 #!/bin/bash
-#prime test
+#prime test c code
 
 gcc -o student_prog submissions/student_code.c -lm
 if [ $? -ne 0 ]; then
