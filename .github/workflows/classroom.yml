@@ -22,9 +22,21 @@ jobs:
         command: bash scripts/autograde.sh
         timeout: 10
         max-score: 7
+    - name: test2
+      id: test2
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test2
+        setup-command: ''
+        command: bash scripts/autograde.sh
+        input: ''
+        expected-output: ''
+        comparison-method: exact
+        timeout: 10
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
         TEST1_RESULTS: "${{steps.test1.outputs.result}}"
+        TEST2_RESULTS: "${{steps.test2.outputs.result}}"
       with:
-        runners: test1
+        runners: test1,test2
