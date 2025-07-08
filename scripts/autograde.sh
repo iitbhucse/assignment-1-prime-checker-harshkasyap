@@ -22,4 +22,4 @@ for i in {1..7}; do
 done
 
 echo "Total Passed: $pass / $total"
-echo "$pass" > grade.txt
+echo "$pass"
