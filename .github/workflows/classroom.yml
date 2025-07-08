@@ -19,7 +19,7 @@ jobs:
       with:
         test-name: test1
         setup-command: ''
-        command: bash scripts/autograde.sh | tail -n 1
+        command: bash scripts/autograde.sh
         timeout: 10
         max-score: 7
     - name: Autograding Reporter
