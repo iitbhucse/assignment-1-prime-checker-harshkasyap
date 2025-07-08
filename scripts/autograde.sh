@@ -8,9 +8,9 @@ if [ $? -ne 0 ]; then
 fi
 
 pass=0
-total=5
+total=7
 
-for i in {1..5}; do
+for i in {1..7}; do
     ./student_prog < testcases/input$i.txt > myout.txt
     diff -w myout.txt testcases/output$i.txt > /dev/null
     if [ $? -eq 0 ]; then
