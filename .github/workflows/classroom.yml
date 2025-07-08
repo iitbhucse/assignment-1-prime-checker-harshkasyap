@@ -21,7 +21,6 @@ jobs:
         setup-command: ''
         command: bash scripts/autograde.sh
         timeout: 10
-        max-score: 7
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
